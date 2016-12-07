@@ -1,10 +1,14 @@
 package com.rsquared.services;
 
 import java.util.List;
+
+import org.springframework.stereotype.Component;
+
 import com.rsquared.entities.Credentials;
 import com.rsquared.entities.Tweet;
 import com.rsquared.entities.User;
 
+@Component
 public interface UserService {
 	
 	List<User> getAllUsers();
@@ -12,6 +16,8 @@ public interface UserService {
 	User getUserByUsername(String username);
 	
 	User updateUserProfile(String username);
+	
+	User createNewUser(User user);
 	
 	User deleteUser(String username);
 	
